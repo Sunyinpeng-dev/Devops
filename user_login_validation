@@ -1,0 +1,27 @@
+import time
+account = {}
+
+num = input('Please enter the name to registered users:')
+account.update(name=num)
+num1 = input('Please enter the passwd to registered password:')
+account.update(password=num1)
+
+time.sleep(2)
+print('='*20,'Is registered, Please wait a moment!','='*20)
+time.sleep(3)
+
+print('='*30,'Please login!','='*33)
+count = 0
+while True:
+    if count < 3:
+        username = input('Please enter username:')
+        password = input('Please enter password:')
+        if username == account['name'] and password == account['password']:
+            print('Successfull login!')
+            break
+        else:
+            print('Input Error, Please resume input Name and Password!')
+            count += 1
+    else:
+        print('Progame Error, Exit!')
+        break
