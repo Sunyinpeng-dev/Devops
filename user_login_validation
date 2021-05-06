@@ -1,16 +1,16 @@
 import time
+#创建一个空字典，然后等待用户注册，并将注册结果添加到字典中
 account = {}
-
 num = input('Please enter the name to registered users:')
 account.update(name=num)
 num1 = input('Please enter the passwd to registered password:')
 account.update(password=num1)
-
+#设置注册等待时间
 time.sleep(2)
 print('='*20,'Is registered, Please wait a moment!','='*20)
 time.sleep(3)
-
 print('='*30,'Please login!','='*33)
+#提示用户登录，并判断用户名和密码输入准确
 count = 0
 while True:
     if count < 3:
